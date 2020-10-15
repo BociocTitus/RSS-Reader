@@ -22,7 +22,7 @@ public class RssItemAnalysisService implements IRssItemAnalysisService {
     @Value("${cyan-trial.stopwords-filepath}")
     private String stopwordsFilePath;
 
-    private String descriptionContentRegExp = "<a\\b[^>]*>(.*?)<\\/a";
+    private final String descriptionContentRegExp = "<a\\b[^>]*>(.*?)<\\/a";
 
     @PostConstruct
     private void readFilesAfterConstruct() {
